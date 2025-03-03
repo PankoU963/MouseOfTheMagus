@@ -1,2 +1,2 @@
-# Mouse-of-the-Magus
+# MouseOfTheMagus
 .|.
