@@ -27,7 +27,7 @@ public class MoverObjetos : MonoBehaviour
 
         bool hits = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
-        if (Input.GetMouseButton(0) && hits)
+        if (Input.GetMouseButtonDown(0) && hits)
         {
             canMove = true;
             objectToMove = hit.collider.gameObject.GetComponent<Rigidbody2D>();
