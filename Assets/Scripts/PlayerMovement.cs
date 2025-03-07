@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        rb.freezeRotation = true;
         //sirve para saber si el floor del personaje atraviesa el suelo
         onFloor = Physics2D.OverlapBox(floorController.position, boxDimension, 0f, isFloor + isAlsoFloor);
 
