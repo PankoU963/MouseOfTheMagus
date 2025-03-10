@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public GameObject Door;
+    public GameObject door;
 
     // Update is called once per frame
     void Update()
@@ -17,7 +17,7 @@ public class Button : MonoBehaviour
     {
         if(other.CompareTag("Block") || other.CompareTag("Player"))
         {
-            Door.SetActive(false);
+            door.SetActive(false);
         }
     }
 
@@ -25,7 +25,7 @@ public class Button : MonoBehaviour
     {
         if(other.CompareTag("Block") || other.CompareTag("Player"))
         {
-            Door.SetActive(true);
+            door.SetActive(true);
         }
     }
 }

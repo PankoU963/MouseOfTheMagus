@@ -6,8 +6,10 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public CameraController cameraController;
+    public int currentLevel;
     void Start()
     {
+        currentLevel = 10;
         cameraController = Camera.main.GetComponent<CameraController>();
     }
 
@@ -19,7 +21,8 @@ public class Goal : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            cameraController.target.position += new Vector3(20,0,0);
+            currentLevel++;
+            cameraController.target.position += new Vector3((currentLevel-1) * 20,0,0);
             Destroy(gameObject);
         }
     }
