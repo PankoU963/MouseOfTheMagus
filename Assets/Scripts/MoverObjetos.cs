@@ -9,10 +9,12 @@ public class MoverObjetos : MonoBehaviour
     public LayerMask layerMask;
     public float speedObjects;
 
+    public GameObject player;
+
     private string targetLayerName = "Move";
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
         layerMask = LayerMask.GetMask("Move");
         canMove = false;
     }
@@ -37,7 +39,7 @@ public class MoverObjetos : MonoBehaviour
             objectToMove.MovePosition(Vector2.Lerp(objectToMove.position, mousePosition, speedObjects * Time.deltaTime));
             objectToMove.gravityScale = 0;
         }
-        if(Input.GetMouseButtonUp(0) && canMove)
+        if(Input.GetMouseButtonUp(0) && canMove || Vector3.Distance(player.transform.position, mousePosition) > 5 && canMove)
         {
             canMove = false;
             objectToMove.gravityScale = 1;
