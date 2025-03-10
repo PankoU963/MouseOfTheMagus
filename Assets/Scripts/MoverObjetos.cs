@@ -8,9 +8,13 @@ public class MoverObjetos : MonoBehaviour
     public Rigidbody2D objectToMove;
     public LayerMask layerMask;
     public float speedObjects;
+
+    private string targetLayerName = "Move";
     void Start()
     {
+        
         layerMask = LayerMask.GetMask("Move");
+        canMove = false;
     }
 
     void Update()
@@ -23,7 +27,7 @@ public class MoverObjetos : MonoBehaviour
 
         bool hits = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
-        if (Input.GetMouseButton(0) && hits)
+        if (Input.GetMouseButtonDown(0) && hits)
         {
             canMove = true;
             objectToMove = hit.collider.gameObject.GetComponent<Rigidbody2D>();
@@ -38,6 +42,23 @@ public class MoverObjetos : MonoBehaviour
             canMove = false;
             objectToMove.gravityScale = 1;
             objectToMove = null;
+        }
+
+        Rigidbody2D[] allRigidbodies = FindObjectsOfType<Rigidbody2D>();
+
+        foreach (Rigidbody2D rb in allRigidbodies)
+        {
+            // Verifica si el objeto está en el layer "move"
+            if (rb.gameObject.layer == LayerMask.NameToLayer(targetLayerName))
+            {
+                // Detiene la rotación del objeto
+                rb.freezeRotation = true;
+            }
+            else
+            {
+                // Si no está en el layer "move", permite la rotación
+                rb.freezeRotation = false;
+            }
         }
     }
 }
