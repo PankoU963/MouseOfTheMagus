@@ -14,7 +14,7 @@ public class MoverObjetos : MonoBehaviour
     {
         
         layerMask = LayerMask.GetMask("Move");
-        
+        canMove = false;
     }
 
     void Update()
