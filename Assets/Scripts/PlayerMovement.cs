@@ -29,7 +29,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool onPlataform;
     private Boolean jump = false;
 
+    [Header("Animations")]
+
+    [SerializeField] private Animation animation;
     
+
     void Start()
     {        
         // tomamos los componente rigidbody y collider
@@ -44,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         movementH = Input.GetAxis("Horizontal")*movementSpeed;
-        
+
         if(Input.GetButtonDown("Jump")){
             jump = true;
         }
