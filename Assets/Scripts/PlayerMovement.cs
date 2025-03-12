@@ -61,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
 
         //cuando el personaje esta sobre la plataforma su material se vuelve "normal" para que este pueda desplazarse sobre la plataforma
         if(onPlataform){
-            Debug.Log("sexo");
             collider.sharedMaterial = normalMaterial;
         }else{
             collider.sharedMaterial = slipperyMaterial;
