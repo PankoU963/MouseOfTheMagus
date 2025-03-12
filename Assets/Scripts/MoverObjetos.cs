@@ -8,6 +8,7 @@ public class MoverObjetos : MonoBehaviour
     public Rigidbody2D objectToMove;
     public LayerMask layerMask;
     public float speedObjects;
+    public Animator animator;
 
     public GameObject player;
 
@@ -25,7 +26,7 @@ public class MoverObjetos : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
 
-
+        animator.SetBool("Magic",canMove);
 
         bool hits = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
