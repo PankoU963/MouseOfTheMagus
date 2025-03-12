@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Animations")]
 
-    [SerializeField] private Animation animation;
+    [SerializeField] private Animator animator;
     
 
     void Start()
@@ -49,9 +49,15 @@ public class PlayerMovement : MonoBehaviour
 
         movementH = Input.GetAxis("Horizontal")*movementSpeed;
 
+        //le manda al animator la señal de que el personaje se mueve para iniciar su animacion
+        animator.SetFloat("Movement",movementH*movementSpeed);
+        animator.SetBool("Jump", onFloor);
+
         if(Input.GetButtonDown("Jump")){
             jump = true;
         }
+
+        
 
         //cuando el personaje esta sobre la plataforma su material se vuelve "normal" para que este pueda desplazarse sobre la plataforma
         if(onPlataform){

@@ -246,6 +246,7 @@ MonoBehaviour:
   boxDimension: {x: 1.21, y: 0.2, z: 0}
   onFloor: 0
   onPlataform: 0
+  animator: {fileID: 1627359582628582040}
 --- !u!1 &516881355406750837
 GameObject:
   m_ObjectHideFlags: 0
