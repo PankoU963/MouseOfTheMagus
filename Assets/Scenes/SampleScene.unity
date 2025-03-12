@@ -239,6 +239,7 @@ MonoBehaviour:
   boxDimension: {x: 0.68, y: 0.16, z: 0}
   onFloor: 0
   onPlataform: 0
+  animation: {fileID: 0}
 --- !u!70 &326550488
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
