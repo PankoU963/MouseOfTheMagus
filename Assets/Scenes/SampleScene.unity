@@ -223,7 +223,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speedObjects: 50
-  animator: {fileID: 773664743}
+  animator: {fileID: 0}
   player: {fileID: 0}
 --- !u!4 &468969817
 Transform:
@@ -451,11 +451,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!95 &773664743 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1627359582628582040, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
-  m_PrefabInstance: {fileID: 1085856}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &966259106
 GameObject:
   m_ObjectHideFlags: 0
