@@ -509,6 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6371844876821282335}
   - component: {fileID: 348293725643564562}
+  - component: {fileID: 8210614608200607054}
   m_Layer: 0
   m_Name: Right hand
   m_TagString: Untagged
@@ -526,7 +527,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0653, y: -0.0821, z: 0}
-  m_LocalScale: {x: 0.39896, y: 0.39896, z: 0.39896}
+  m_LocalScale: {x: 0.39896, y: 0.39896, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 211479406933871084}
@@ -583,6 +584,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!122 &8210614608200607054
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470510979441829289}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4281073408
+  m_Size: 0.5
 --- !u!1 &3123796880956466297
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3511460733877974745}
   - component: {fileID: 7425260245245712608}
+  - component: {fileID: 3504142310930182432}
   m_Layer: 0
   m_Name: Left hand
   m_TagString: Untagged
@@ -1012,7 +1026,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0685, y: -0.0797, z: 0}
-  m_LocalScale: {x: -0.39896, y: 0.39896, z: 0.39896}
+  m_LocalScale: {x: -0.39896, y: 0.39896, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 211479406933871084}
@@ -1069,6 +1083,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!122 &3504142310930182432
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961124662798514976}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4281073408
+  m_Size: 0.5
 --- !u!1 &8167770068862270935
 GameObject:
   m_ObjectHideFlags: 0

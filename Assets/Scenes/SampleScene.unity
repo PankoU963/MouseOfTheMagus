@@ -218,7 +218,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  speedObjects: 10
+  speedObjects: 50
   animator: {fileID: 773664743}
   player: {fileID: 0}
 --- !u!4 &468969817
