@@ -18,6 +18,7 @@ public class MoverObjetos : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         layerMask = LayerMask.GetMask("Move");
         canMove = false;
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void Update()
