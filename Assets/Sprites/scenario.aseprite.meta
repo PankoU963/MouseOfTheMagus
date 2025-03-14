@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7116f6cf48b61b44af9329fb562b5a1
+guid: 935b0f63e76d1fe49bc5bbb1daabca53
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,7 +32,7 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 1
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 100
@@ -53,9 +53,9 @@ ScriptedImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
     normalMap: 0
     textureFormat: 0
     maxTextureSize: 0
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638772535629408622
+  platformSettingsDirtyTick: 638774908919364155
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Floor
+  - name: scenario
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.90909094, y: -0.42857146}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 32
-    spriteID: 38731ed75dea99941b98fddf70f1f2c3
+      width: 55
+      height: 70
+    spriteID: bcd3552731edf464186b7f470232693d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,7 +142,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: Floor_0
+  - name: scenario_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -150,10 +150,50 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
+      y: 42
+      width: 32
+      height: 32
+    spriteID: 887a541c8617ae44bacde9f7ddbe2c24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: scenario_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 43
+      width: 16
+      height: 31
+    spriteID: 59c919dcaf560774cbdebe5c97f8a969
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: scenario_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5
       y: 4
       width: 32
       height: 32
-    spriteID: 261f69ad1add0604cbcb7c42f2a8f72c
+    spriteID: 631f24b6baa237347a0a2887cdc808b5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -164,20 +204,20 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 891758476
-    name: Floor
+    guid: -35982924
+    name: scenario
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Floor
+    - name: scenario
       frameIndex: 0
       cellRect:
         x: 0
-        y: 0
-        width: 32
-        height: 32
-      spriteId: 38731ed75dea99941b98fddf70f1f2c3
+        y: 30
+        width: 55
+        height: 70
+      spriteId: bcd3552731edf464186b7f470232693d
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -205,7 +245,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  generatePhysicsShape: 1
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 100, y: 100}
