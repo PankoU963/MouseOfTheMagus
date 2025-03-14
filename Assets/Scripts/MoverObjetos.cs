@@ -36,7 +36,7 @@ public class MoverObjetos : MonoBehaviour
             canMove = true;
             objectToMove = hit.collider.gameObject.GetComponent<Rigidbody2D>();
         }
-        if (canMove)
+        if (canMove && Vector3.Distance(player.transform.position, mousePosition) < 5)
         {
             objectToMove.MovePosition(Vector2.Lerp(objectToMove.position, mousePosition, speedObjects * Time.deltaTime));
             objectToMove.gravityScale = 0;
