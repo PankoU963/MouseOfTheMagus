@@ -8,13 +8,17 @@ public class MoverObjetos : MonoBehaviour
     public Rigidbody2D objectToMove;
     public LayerMask layerMask;
     public float speedObjects;
+    public Animator animator;
+
+    public GameObject player;
 
     private string targetLayerName = "Move";
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
         layerMask = LayerMask.GetMask("Move");
         canMove = false;
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void Update()
@@ -23,7 +27,7 @@ public class MoverObjetos : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
 
-
+        animator.SetBool("Magic",canMove);
 
         bool hits = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
@@ -37,7 +41,7 @@ public class MoverObjetos : MonoBehaviour
             objectToMove.MovePosition(Vector2.Lerp(objectToMove.position, mousePosition, speedObjects * Time.deltaTime));
             objectToMove.gravityScale = 0;
         }
-        if(Input.GetMouseButtonUp(0) && canMove)
+        if(Input.GetMouseButtonUp(0) && canMove || Vector3.Distance(player.transform.position, mousePosition) > 5 && canMove)
         {
             canMove = false;
             objectToMove.gravityScale = 1;

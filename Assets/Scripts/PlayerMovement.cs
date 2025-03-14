@@ -29,7 +29,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool onPlataform;
     private Boolean jump = false;
 
+    [Header("Animations")]
+
+    [SerializeField] private Animator animator;
     
+
     void Start()
     {        
         // tomamos los componente rigidbody y collider
@@ -44,14 +48,19 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         movementH = Input.GetAxis("Horizontal")*movementSpeed;
-        
+
+        //le manda al animator la señal de que el personaje se mueve para iniciar su animacion
+        animator.SetFloat("Movement",movementH*movementSpeed);
+        animator.SetBool("Jump", onFloor);
+
         if(Input.GetButtonDown("Jump")){
             jump = true;
         }
 
+        
+
         //cuando el personaje esta sobre la plataforma su material se vuelve "normal" para que este pueda desplazarse sobre la plataforma
         if(onPlataform){
-            Debug.Log("sexo");
             collider.sharedMaterial = normalMaterial;
         }else{
             collider.sharedMaterial = slipperyMaterial;
