@@ -183,6 +183,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8210614608200607054, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135566283632013850, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.23917925
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135566283632013850, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.21870826
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135566283632013850, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.007724747
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135566283632013850, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.017390244
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
