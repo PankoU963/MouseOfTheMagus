@@ -11,9 +11,9 @@ public class MenuNiveles : MonoBehaviour
 
         PlayerPrefs.SetInt("Nivel", index);
         Debug.Log(PlayerPrefs.GetInt("Nivel"));
-        //PlayerPrefs.Save();
+        PlayerPrefs.Save();
 
-        SceneManager.LoadScene(2); //Carga la escena de los 10 niveles
+        SceneManager.LoadScene(1); //Carga la escena de los 10 niveles
         
     }
 }
