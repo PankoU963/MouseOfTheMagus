@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]PhysicsMaterial2D slipperyMaterial;
     [SerializeField]PhysicsMaterial2D normalMaterial;
     private Collider2D collider;
+    public AudioSource audioSource;
 
     [Header("Jump")]
 
@@ -48,7 +49,11 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         movementH = Input.GetAxis("Horizontal")*movementSpeed;
-
+        if(movementH != 0){
+            if(audioSource != null && !audioSource.isPlaying){
+                audioSource.Play();
+            }
+        }
         //le manda al animator la señal de que el personaje se mueve para iniciar su animacion
         animator.SetFloat("Movement",movementH*movementSpeed);
         animator.SetBool("Jump", onFloor);
