@@ -7,9 +7,10 @@ public class Goal : MonoBehaviour
 {
     public CameraController cameraController;
     public int currentLevel;
+
     void Start()
     {
-        currentLevel = 10;
+        currentLevel = PlayerPrefs.GetInt("Nivel");
         cameraController = Camera.main.GetComponent<CameraController>();
     }
 
@@ -22,7 +23,9 @@ public class Goal : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             currentLevel++;
-            cameraController.target.position += new Vector3((currentLevel-1) * 20,0,0);
+            cameraController.target.position += new Vector3((currentLevel-1) * 18,0,0);
+            PlayerPrefs.SetInt("Nivel", currentLevel);
+            PlayerPrefs.Save();
             Destroy(gameObject);
         }
     }
