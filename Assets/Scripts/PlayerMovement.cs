@@ -87,10 +87,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Velocity = new Vector2(movement, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, Velocity, ref speed, smoothness);
 
-        if(movement < 0 && !lookRight){
+        if(movement > 0 && !lookRight){
             Turn();
         }
-        else if(movement > 0 && lookRight){
+        else if(movement < 0 && lookRight){
             Turn();
         }
         
