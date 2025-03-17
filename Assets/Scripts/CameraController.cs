@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
             target.position = camera.transform.position;
         } else if (nivel < 11 && nivel >= 2)
         {
-            camera.transform.position = new Vector3(18 * nivel-1,0,-10);
+            camera.transform.position = new Vector3(18 * (nivel-1),0,-10);
             target.position = camera.transform.position;
         }
     }
