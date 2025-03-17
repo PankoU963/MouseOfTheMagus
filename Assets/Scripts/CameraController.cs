@@ -8,12 +8,25 @@ public class CameraController : MonoBehaviour
     public Rigidbody2D rigidCamera;
     public float speedCamera;
     public Transform target;
+
+    public int nivel;
+    
+    
     public void Start()
     {
         camera = Camera.main;
-        camera.transform.position = new Vector3(0,0,-10);
         rigidCamera = camera.GetComponent<Rigidbody2D>();
-        target.position = camera.transform.position;
+        nivel = PlayerPrefs.GetInt("Nivel");
+        
+        if(nivel == 0 || nivel == 1)
+        {
+            camera.transform.position = new Vector3(0,0,-10);
+            target.position = camera.transform.position;
+        } else if (nivel < 11 && nivel >= 2)
+        {
+            camera.transform.position = new Vector3(18 * nivel-1,0,-10);
+            target.position = camera.transform.position;
+        }
     }
 
     public void Update()
