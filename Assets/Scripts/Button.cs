@@ -5,7 +5,15 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    public Animator animator;
+
     public GameObject door;
+    public Animator doorAnimator;
+    public void Awake()
+    {
+        animator = gameObject.GetComponent<Animator>();
+        doorAnimator = door.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,7 +25,9 @@ public class Button : MonoBehaviour
     {
         if(other.CompareTag("Block") || other.CompareTag("Player"))
         {
-            door.SetActive(false);
+            animator.SetBool("Pressed", true);
+            doorAnimator.SetBool("Open", true);
+            door.GetComponent<BoxCollider2D>().isTrigger = true;
         }
     }
 
@@ -25,7 +35,9 @@ public class Button : MonoBehaviour
     {
         if(other.CompareTag("Block") || other.CompareTag("Player"))
         {
-            door.SetActive(true);
+            animator.SetBool("Pressed", false);
+            doorAnimator.SetBool("Open", false);
+            door.GetComponent<BoxCollider2D>().isTrigger = false;
         }
     }
 }

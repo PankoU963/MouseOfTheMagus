@@ -717,11 +717,11 @@ PrefabInstance:
       objectReference: {fileID: 1606632209}
     - target: {fileID: 6762986580646628803, guid: 47d2f1c8cc219034bb5c6cce2ab551ca, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6762986580646628803, guid: 47d2f1c8cc219034bb5c6cce2ab551ca, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6762986580646628803, guid: 47d2f1c8cc219034bb5c6cce2ab551ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1330,6 +1330,7 @@ MonoBehaviour:
   rigidCamera: {fileID: 0}
   speedCamera: 100
   target: {fileID: 499483304}
+  nivel: 0
 --- !u!50 &2129689513
 Rigidbody2D:
   serializedVersion: 4

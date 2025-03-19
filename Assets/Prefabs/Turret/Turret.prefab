@@ -186,4 +186,5 @@ MonoBehaviour:
   bulletSpawn: {fileID: 252929772897139810}
   shootTime: 5
   shoot: 0
+  scale: 0
   left: 0

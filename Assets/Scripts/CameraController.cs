@@ -10,10 +10,16 @@ public class CameraController : MonoBehaviour
     public Transform target;
 
     public int nivel;
-    
-    
+
+    private void Awake()
+    {
+        PlayerPrefs.SetInt("Nivel", 1);
+        PlayerPrefs.Save();
+    }
+
     public void Start()
     {
+
         camera = Camera.main;
         rigidCamera = camera.GetComponent<Rigidbody2D>();
         nivel = PlayerPrefs.GetInt("Nivel");
@@ -35,7 +41,8 @@ public class CameraController : MonoBehaviour
     }
 
     public void LevelCompleted()
-    {
+    { 
+        target.position = new Vector3(18 * (PlayerPrefs.GetInt("Nivel")-1),0,-10);
         rigidCamera.MovePosition(Vector2.MoveTowards(camera.transform.position, target.position, speedCamera* Time.deltaTime));
     }
 
