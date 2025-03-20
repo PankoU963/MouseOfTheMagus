@@ -175,6 +175,8 @@ MonoBehaviour:
   bulletRigid: {fileID: 0}
   shootSpeed: 0
   autoDestroy: 0
+  barraVida: {fileID: 0}
+  damage: 5
   turret: {fileID: 0}
 --- !u!95 &7231926466837586775
 Animator:

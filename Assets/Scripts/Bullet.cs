@@ -10,7 +10,8 @@ public class Bullet : MonoBehaviour
     public int shootSpeed;
     public float autoDestroy;
 
-
+    public BarraVida barraVida;
+    public float damage;
     private int direction;
 
     //DIRECTION
@@ -21,6 +22,8 @@ public class Bullet : MonoBehaviour
         bulletRigid = gameObject.GetComponent<Rigidbody2D>();
         shootSpeed = 1000;
         autoDestroy = 10;
+
+        barraVida = GameObject.FindGameObjectWithTag("Health Bar").GetComponent<BarraVida>();
     }
 
     // Update is called once per frame
@@ -44,6 +47,10 @@ public class Bullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Player"))
+        {
+            barraVida.tiempoRegresivo -= damage;
+        }
         Destroy(gameObject);
     }
 }
