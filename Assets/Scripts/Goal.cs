@@ -8,9 +8,17 @@ public class Goal : MonoBehaviour
     public CameraController cameraController;
     public int currentLevel;
 
+    public CheckPointController checkPointController;
+    private void Awake()
+    {
+        checkPointController = GameObject.FindGameObjectWithTag("Manager").GetComponent<CheckPointController>();
+        cameraController = Camera.main.GetComponent<CameraController>();
+    }
+
     void Start()
     {
-        cameraController = Camera.main.GetComponent<CameraController>();
+
+
     }
 
     void Update()
@@ -23,6 +31,7 @@ public class Goal : MonoBehaviour
         {
             PlayerPrefs.SetInt("Nivel", (currentLevel+1));
             PlayerPrefs.Save();
+            checkPointController.NextLevel();
             Destroy(gameObject);
         }
     }

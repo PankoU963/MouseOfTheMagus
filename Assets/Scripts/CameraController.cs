@@ -13,8 +13,7 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("Nivel", 1);
-        PlayerPrefs.Save();
+
     }
 
     public void Start()

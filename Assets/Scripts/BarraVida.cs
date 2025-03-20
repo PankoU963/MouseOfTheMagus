@@ -8,12 +8,19 @@ public class BarraVida : MonoBehaviour
 
     public Image rellenoBarraVida;
 
-    public float tiempoMax = 120f;
-    private float tiempoRegresivo;
+    public float tiempoMax;
+    public float tiempoRegresivo;
 
+    public bool ChangeLevel;
 
-
+    public CheckPointController checkPointController;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        checkPointController = GameObject.FindGameObjectWithTag("Manager").GetComponent<CheckPointController>();
+        tiempoMax = 15f;
+    }
     void Start()
     {
         tiempoRegresivo = tiempoMax;
@@ -22,7 +29,49 @@ public class BarraVida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tiempoRegresivo -= Time.deltaTime;
-        rellenoBarraVida.fillAmount = tiempoRegresivo / tiempoMax;
+        if(ChangeLevel == false)
+        {
+            tiempoRegresivo -= Time.deltaTime;
+            rellenoBarraVida.fillAmount = tiempoRegresivo / tiempoMax;
+        }
+
+        switch (PlayerPrefs.GetInt("Nivel"))
+        {
+            case 1:
+                tiempoMax = 15f;
+                break;
+            case 2:
+                tiempoMax = 15f;
+                break;
+            case 3:
+                tiempoMax = 15f;
+                break;
+            case 4:
+                tiempoMax = 15f;
+                break;
+            case 5:
+                tiempoMax = 15f;
+                break;
+            case 6:
+                tiempoMax = 15f;
+                break;
+            case 7:
+                tiempoMax = 15f;
+                break;
+            case 8:
+                tiempoMax = 15f;
+                break;
+            case 9:
+                tiempoMax = 15f;
+                break;
+            case 10:
+                tiempoMax = 15f;
+                break;
+        }
+    }
+
+    public void LevelCompleted()
+    {
+        tiempoRegresivo = tiempoMax;
     }
 }
