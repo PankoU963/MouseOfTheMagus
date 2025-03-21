@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a665ee203ca63934192d28c83f633342
+=======
+guid: dc4258d1806ea404098a6656650a73e1
+>>>>>>> Sprites
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

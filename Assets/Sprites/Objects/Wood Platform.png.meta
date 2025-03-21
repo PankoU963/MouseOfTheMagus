@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Objects/Wood Platform.png.meta
 guid: 8d0ea68332688b045a227f42ec5afe28
+=======
+guid: b7daede9ff446ab4c8957f721ad850d4
+>>>>>>> Sprites:Assets/UI/Puzzle stage & settings GUI Pack/Image_green/bar box.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

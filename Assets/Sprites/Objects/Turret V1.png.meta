@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Objects/Turret V1.png.meta
 guid: 7074216335144e548831cc7adc8cba35
+=======
+guid: 7a3bd0716390ee14e8e40560677b7917
+>>>>>>> Sprites:Assets/UI/Puzzle stage & settings GUI Pack/Image_green/+.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

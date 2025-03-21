@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Objects/Stone wall.png.meta
 guid: e085f64f6f1feee4690b76a21f19abee
+=======
+guid: 247a9af120a108e41bd1f3f83f05ffbe
+>>>>>>> Sprites:Assets/UI/Puzzle stage & settings GUI Pack/Image_green/box.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
