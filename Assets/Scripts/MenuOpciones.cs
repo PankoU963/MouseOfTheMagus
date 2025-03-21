@@ -19,4 +19,15 @@ public class MenuOpciones : MonoBehaviour
     public void CambiarCalidad(int index){
         QualitySettings.SetQualityLevel(index);
     }
+
+    public void Reset()
+    {
+        for(int i = 1;  i <= 10; i++)
+        {
+            PlayerPrefs.SetInt("Moneda"+i,0);
+        }
+        PlayerPrefs.SetInt("Nivel",1);
+        PlayerPrefs.SetInt("NivelMaximo",1);
+        PlayerPrefs.Save();
+    }
 }

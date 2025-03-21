@@ -70,6 +70,10 @@ public class Goal : MonoBehaviour
                 }
             }
             PlayerPrefs.SetInt("Nivel", (currentLevel+1));
+            if(currentLevel >= PlayerPrefs.GetInt("NivelMaximo"))
+            {
+                PlayerPrefs.SetInt("NivelMaximo", currentLevel+1);
+            }
             PlayerPrefs.Save();
             checkPointController.NextLevel();
             checkMonedas.ActualizarMonedas();
