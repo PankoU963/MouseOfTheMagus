@@ -5,6 +5,7 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     public GameObject player;
+    public GameObject actual;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -17,7 +18,11 @@ public class Key : MonoBehaviour
         {
             if(player.GetComponent<Variables>().key == true)
             {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x, player.transform.position.y +1.5f), 3f* Time.deltaTime);
+                if(actual != null)
+                {
+                    actual.transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x, player.transform.position.y + 1.5f), 3f * Time.deltaTime);
+                }
+                
             }
         }
 
@@ -28,6 +33,7 @@ public class Key : MonoBehaviour
         {
             other.GetComponent<Variables>().key = true;
             other.GetComponent<Variables>().actualKey = transform.gameObject;
+            actual = transform.gameObject;
         }
     }
 }

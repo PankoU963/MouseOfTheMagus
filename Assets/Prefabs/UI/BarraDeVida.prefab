@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -17.236, y: -14.363}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7012955781807856300
@@ -109,11 +109,11 @@ RectTransform:
   - {fileID: 3829002010253695891}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 68, y: -39}
-  m_SizeDelta: {x: 741.107, y: 61.003}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1500, y: 60}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &5799047319206674077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rellenoBarraVida: {fileID: 4028799351922724807}
   tiempoMax: 15
+  tiempoRegresivo: 0
+  ChangeLevel: 0
+  checkPointController: {fileID: 0}
 --- !u!1 &8798105211820209563
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000091552734, y: 0}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &381881657306298567
