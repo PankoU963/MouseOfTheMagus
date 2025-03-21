@@ -8,6 +8,7 @@ TagManager:
   - Key
   - Manager
   - Health Bar
+  - Pause
   layers:
   - Default
   - TransparentFX

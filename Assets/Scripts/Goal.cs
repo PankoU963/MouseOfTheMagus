@@ -10,15 +10,18 @@ public class Goal : MonoBehaviour
     public List<bool> monedas = new List<bool>(new bool[10]); 
 
     public CheckPointController checkPointController;
+
+    private PausarJuego checkMonedas;
     private void Awake()
     {
+        checkMonedas = GameObject.FindGameObjectWithTag("Pause").GetComponent<PausarJuego>();
         checkPointController = GameObject.FindGameObjectWithTag("Manager").GetComponent<CheckPointController>();
         cameraController = Camera.main.GetComponent<CameraController>();
     }
 
     void Start()
     {
-
+        checkMonedas.ActualizarMonedas();
 
     }
 
@@ -69,6 +72,7 @@ public class Goal : MonoBehaviour
             PlayerPrefs.SetInt("Nivel", (currentLevel+1));
             PlayerPrefs.Save();
             checkPointController.NextLevel();
+            checkMonedas.ActualizarMonedas();
             Destroy(gameObject);
                 
         }
