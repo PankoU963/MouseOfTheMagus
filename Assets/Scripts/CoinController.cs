@@ -13,7 +13,6 @@ public class CoinController : MonoBehaviour
     public Goal goal;
     void Awake()
     {
-        PlayerPrefs.SetInt("Moneda1", 0);
         switch (monedaNivel)
         {
             case 1:

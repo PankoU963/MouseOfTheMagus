@@ -68,6 +68,10 @@ public class BarraVida : MonoBehaviour
                 tiempoMax = 15f;
                 break;
         }
+
+        if(Input.GetKeyDown(KeyCode.R)){
+            tiempoRegresivo = 0;
+        }
     }
 
     public void LevelCompleted()

@@ -244,7 +244,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   floorController: {fileID: 484448132564472680}
-  boxDimension: {x: 1.22, y: 0.17, z: 0}
+  boxDimension: {x: 0.95, y: 0.17, z: 0}
   onFloor: 0
   onPlataform: 0
   animator: {fileID: 1627359582628582040}
