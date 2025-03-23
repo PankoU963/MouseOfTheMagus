@@ -20,14 +20,29 @@ public class CheckPointController : MonoBehaviour
     }
     void Start()
     {
-        currentCheckPoint = checkPoints[PlayerPrefs.GetInt("Nivel")-1];
-        player.transform.position = currentCheckPoint.transform.position;
+        if (nivel == 11)
+        {
+            PlayerPrefs.SetInt("Nivel", 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("MenuInicial");
+        }
+        if (nivel <= 10)
+        {
+            currentCheckPoint = checkPoints[PlayerPrefs.GetInt("Nivel") - 1];
+            player.transform.position = currentCheckPoint.transform.position;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         nivel = PlayerPrefs.GetInt("Nivel");
+        if (nivel == 11)
+        {
+            PlayerPrefs.SetInt("Nivel", 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("MenuInicial");
+        }
 
         for (int i = 0; i < checkPoints.Length; i++)
         {
@@ -35,6 +50,10 @@ public class CheckPointController : MonoBehaviour
             {
                 currentCheckPoint = checkPoints[i-1];
             }
+        }
+        if(nivel == 10)
+        {
+            currentCheckPoint = checkPoints[9];
         }
 
         if (Vector3.Distance(player.transform.position, currentCheckPoint.transform.position) < 0.5f && player.GetComponent<PlayerMovement>().enabled == false)
@@ -54,6 +73,7 @@ public class CheckPointController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
 
     }
 
