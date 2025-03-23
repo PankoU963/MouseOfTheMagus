@@ -12,6 +12,10 @@ public class MenuNiveles : MonoBehaviour
         if(PlayerPrefs.GetInt("NivelMaximo") == 0){
             PlayerPrefs.SetInt("NivelMaximo",1);
         }
+        if(PlayerPrefs.GetInt("NivelMaximo") == 11)
+        {
+            PlayerPrefs.SetInt("NivelMaximo", 10);
+        }
     }
 
     void Update()
@@ -19,7 +23,6 @@ public class MenuNiveles : MonoBehaviour
         foreach(GameObject niv in Niveles){
             niv.SetActive(false);
         }
-        Debug.Log(PlayerPrefs.GetInt("NivelMaximo"));
         for (int i = 1; i <= PlayerPrefs.GetInt("NivelMaximo"); i++)
         {
             Niveles[i-1].SetActive(true);
