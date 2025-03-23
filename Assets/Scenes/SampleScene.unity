@@ -5513,7 +5513,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 211479406933871084, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 211479406933871084, guid: 0f04ad55535521d45a45b24463003d0a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11338,7 +11338,7 @@ MonoBehaviour:
   rigidCamera: {fileID: 0}
   speedCamera: 100
   target: {fileID: 499483304}
-  nivel: 0
+  nivel: 9
 --- !u!50 &2129689513
 Rigidbody2D:
   serializedVersion: 4
