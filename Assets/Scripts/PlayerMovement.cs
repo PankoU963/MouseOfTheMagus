@@ -17,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]PhysicsMaterial2D slipperyMaterial;
     [SerializeField]PhysicsMaterial2D normalMaterial;
     private Collider2D collider;
-    [SerializeField] public AudioSource audio;
+    [SerializeField] public AudioSource audioMovement;
+    [SerializeField] public AudioSource audioJump;
 
     [Header("Jump")]
 
@@ -49,9 +50,9 @@ public class PlayerMovement : MonoBehaviour
 
         movementH = Input.GetAxis("Horizontal")*movementSpeed;
 
-        if(movementH != 0){
-            if(audio != null && !audio.isPlaying){
-                audio.Play();
+        if(movementH != 0 && onFloor){
+            if(audioMovement != null && !audioMovement.isPlaying){
+                audioMovement.Play();
             }
         }
         //le manda al animator la señal de que el personaje se mueve para iniciar su animacion
@@ -59,6 +60,13 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Jump", onFloor);
 
         if(Input.GetButtonDown("Jump")){
+            if(audioMovement.isPlaying){
+                audioMovement.Stop();
+            }
+            if(audioJump != null && !audioJump.isPlaying){
+                
+                audioJump.Play();
+            }
             jump = true;
         }
 
