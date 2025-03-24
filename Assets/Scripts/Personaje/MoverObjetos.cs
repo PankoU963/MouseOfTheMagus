@@ -9,6 +9,7 @@ public class MoverObjetos : MonoBehaviour
     public LayerMask layerMask;
     public float speedObjects;
     public Animator animator;
+    public AudioSource audioMagic;
 
     public GameObject player;
 
@@ -33,16 +34,21 @@ public class MoverObjetos : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
         if (Input.GetMouseButtonDown(0) && hits)
         {
+           
             canMove = true;
             objectToMove = hit.collider.gameObject.GetComponent<Rigidbody2D>();
         }
         if (canMove && Vector3.Distance(player.transform.position, mousePosition) < 4)
         {
+             if(audioMagic != null && !audioMagic.isPlaying){
+                audioMagic.Play();
+            }
             objectToMove.MovePosition(Vector2.Lerp(objectToMove.position, mousePosition, speedObjects * Time.deltaTime));
             objectToMove.gravityScale = 0;
         }
         if(Input.GetMouseButtonUp(0) && canMove || Vector3.Distance(player.transform.position, mousePosition) > 4 && canMove)
         {
+            audioMagic.Stop();
             canMove = false;
             objectToMove.gravityScale = 1;
             objectToMove = null;
