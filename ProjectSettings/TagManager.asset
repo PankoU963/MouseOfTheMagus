@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Block
   - Key
+  - Manager
+  - Health Bar
+  - Pause
   layers:
   - Default
   - TransparentFX
@@ -51,4 +54,7 @@ TagManager:
     locked: 0
   - name: 1
     uniqueID: 3425308079
+    locked: 0
+  - name: 2
+    uniqueID: 1554750133
     locked: 0
